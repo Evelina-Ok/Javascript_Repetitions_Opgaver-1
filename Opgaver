@@ -12,8 +12,8 @@
 
 6. Lav en funktion der kan fjerne alle vokaler i en string. Din funktion skal kunne tage imod
    et ord som argument og "rense" det for alle vokaler inden det vises i DOM´en.
-
-
+ 
+ 
 ## Lektion 2 Øvelsesopgaver / Numbers, Regex og String metoder
 
 1. Lav en funktion der kan tjekke om en værdi (argumentet) er en string eller et tal og vise det i DOM´en.
