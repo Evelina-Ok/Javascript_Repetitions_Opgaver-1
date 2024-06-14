@@ -55,30 +55,107 @@ const stringLength = (string) => {
 };
 
 //Opgave 4
+const getRandomNumber = (min, max) => { //creating an arrow function to get a random number between 2 values
+    const randomNumberBtn = document.createElement('button'); //creating button inside html
+    randomNumberBtn.textContent = `Get a random number between ${min} & ${max}`; //creating a message for the button
+    L2_4.appendChild(randomNumberBtn); //appending button to html so it shows
 
+    randomNumberBtn.addEventListener('click', () => { //adding event listener to work on click of the button
+        // Both min and max are inclusive - (min - max + 1)
+        //notice that max is written before min. Otherwise negative numbers will also be included
+        let randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
 
+        const randomNumberText = document.createElement('p');
+        randomNumberText.textContent = `Vores tilfældige tal mellem ${min} og ${max} er: ${randomNumber}`;
+        L2_4.appendChild(randomNumberText);
+    });
+};
 
 //Opgave 5
+const getRandomColor = () => {
+    return Math.floor(Math.random() * 256);
+};
+    const colorBtn = document.createElement('button');
+    colorBtn.textContent = 'Get a random colour';
+    L2_5.appendChild(colorBtn);
+
+    colorBtn.addEventListener('click', () => {
+        let rgbColor = `rgb(${getRandomColor()}, ${getRandomColor()}, ${getRandomColor()})`;
+        console.log(rgbColor);
+
+        // if changing colour of the same div without generating new div
+        // let colorElement = document.getElementById('L2_5');
+        // colorElement.style.background = rgbColor;
+
+
+        let colorElement = document.createElement('div');
+        // colorElement.textContent = '';
+       
+        colorElement.style.backgroundColor = rgbColor
+
+        L2_5.appendChild(colorElement);
+
+    });
+
+
+
+
+// const r = generateRandomInteger(0, 255);
+// const g = generateRandomInteger(0, 255);
+// const b = generateRandomInteger(0, 255);
 
 
 //Function Calls:
 stringOrNumber('120');
 checkEmail('name@smth.com');
 stringLength('Yellow submarine');
+getRandomNumber(4, 32);
+getRandomColor()
 
 
 
 
 
 
-const classArray = ['Kasper', 'Mathias', 'Peter', 'Christian'];
-function displayClassmates() {
-    for(let i = 0; i < classArray.length; i++) {
-        let newElement = document.createElement('p')
-        newElement.innerText = classArray[i];
-        newElement.style = `font-size $(i)rem`
-        L3_1.appendChild(newElement);
-    }
+//class notes
+// [
+// {
+//     role: 'student',
+//     name: 'Omid',
+//     favouritePet: 'wolf',
+//     editName(value) {
+//         this.name = value;
+//     }
+// }
+// ]
+
+
+
+// function displayClassmates() {
+//     console.log(classArray);
+//     for(let i = 0; i < classArray.length; i++) {
+//         let newElement = document.createElement('p');
+//         let pet = document.createElement('p');
+//         newElement.innerText = classArray[i].role + '' + classArray[i];
+//         newElement.style = `font-size $(i)rem`
+//         L3_1.appendChild(newElement);
+//     }
     
-}
-displayClassmates()
+// }
+// displayClassmates()
+
+
+
+
+
+// const classArray = ['Kasper', 'Mathias', 'Peter', 'Christian'];
+// function displayClassmates() {
+//     for(let i = 0; i < classArray.length; i++) {
+//         let newElement = document.createElement('p')
+//         newElement.innerText = classArray[i];
+//         newElement.style = `font-size $(i)rem`
+//         L3_1.appendChild(newElement);
+//     }
+    
+// }
+// displayClassmates()
