@@ -73,7 +73,7 @@ const getRandomNumber = (min, max) => { //creating an arrow function to get a ra
 
 //Opgave 5
 const getRandomColor = () => {
-    return Math.floor(Math.random() * 256);
+    return Math.floor(Math.random(1) * 255);
 };
     const colorBtn = document.createElement('button');
     colorBtn.textContent = 'Get a random colour';
@@ -98,7 +98,7 @@ const getRandomColor = () => {
     });
 
 
-
+    
 
 // const r = generateRandomInteger(0, 255);
 // const g = generateRandomInteger(0, 255);
