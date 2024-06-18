@@ -15,7 +15,7 @@ const webDev = {
         this.students.forEach((student) => {
             console.log(student);
         });
-    };
+    }
 };
 
 
